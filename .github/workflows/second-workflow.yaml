@@ -8,4 +8,4 @@ jobs:
       - name: Command in Multiline
         run: |
           pwd
-          ls -la
+          ls -a
