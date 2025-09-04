@@ -1,9 +1,8 @@
-name: First Workflow
+name: Second Workflow
 on: [push]
 
 jobs:
-  run-first-job:
-    name: First Job
+  run-first-command:
     runs-on: ubuntu-latest
     steps:
       - name: Command in Multiline
