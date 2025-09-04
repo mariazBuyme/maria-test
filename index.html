@@ -1,0 +1,95 @@
+## Me
+create index.html simpliset file
+
+## AI Assistant
+Here’s a simple index.html to get you started:
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Page</title>
+    <style>
+        /* Basic reset and minimal styling */
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            color: #222;
+            background: #f7f7f7;
+        }
+        header, footer {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 1rem;
+        }
+        footer {
+            border-top: 1px solid #e5e5e5;
+            border-bottom: none;
+            text-align: center;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: #ffffff;
+            padding: 1.5rem;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        }
+        a {
+            color: #0b5fff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 0.9rem;
+            background: #0b5fff;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #094bcc;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Welcome</h1>
+</header>
+
+<main>
+    <h2>Simple Starter Page</h2>
+    <p>This is a minimal HTML template. Edit this content to build your page.</p>
+    <button class="btn" id="helloBtn">Say Hello</button>
+    <p id="message" aria-live="polite"></p>
+</main>
+
+<footer>
+    <small>&copy; <span id="year"></span> Your Name</small>
+</footer>
+
+<script>
+    // Minimal interactivity
+    (function () {
+        var yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        var btn = document.getElementById('helloBtn');
+        var msg = document.getElementById('message');
+        if (btn && msg) {
+            btn.addEventListener('click', function () {
+                msg.textContent = 'Hello there! This message was set with JavaScript.';
+            });
+        }
+    })();
+</script>
+</body>
+</html>
