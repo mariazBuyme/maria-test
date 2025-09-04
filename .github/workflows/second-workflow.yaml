@@ -1,0 +1,12 @@
+name: First Workflow
+on: [push]
+
+jobs:
+  run-first-job:
+    name: First Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Command in Multiline
+        run: |
+          pwd
+          ls -la
