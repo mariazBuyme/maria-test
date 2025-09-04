@@ -19,9 +19,9 @@ jobs:
       - name: First Step on parallel job
         run: echo "Hello Parallel World windows"
   run-second-job:
-    name: Parallel Job
+    name: Second Job
     runs-on: macos-latest
     needs: run-first-job
     steps:
       - name: First Step of second job
-        run: echo "Hello Parallel World macos"
+        run: echo "Hello Second World macos"
