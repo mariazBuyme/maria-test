@@ -2,13 +2,26 @@ name: First Workflow
 on: [push]
 
 jobs:
-  first-job:
+  run-first-job:
     name: First Job
     runs-on: ubuntu-latest
     steps:
       - name: First Step - display first name
-        run: echo "Hello World"
+        run: echo "Hello World ubuntu"
       - name: Second Step
         run: |
           npm -v
           node -v
+  run-parallel-job:
+    name: Parallel Job
+    runs-on: windows-latest
+    steps:
+      - name: First Step on parallel job
+        run: echo "Hello Parallel World windows"
+  run-second-job:
+    name: Parallel Job
+    runs-on: macos-latest
+    needs: run-first-job
+    steps:
+      - name: First Step of second job
+        run: echo "Hello Parallel World macos"
